@@ -1,0 +1,25 @@
+# 비밀값 (예시는 .env.example 에만)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Claude Code 개인 설정
+.claude/settings.local.json
+
+# Go
+/bin/
+/tmp/
+*.test
+*.out
+coverage.*
+
+# Web
+web/node_modules/
+web/dist/
+
+# OS / 에디터
+.DS_Store
+.idea/
+.vscode/
