@@ -62,3 +62,17 @@ docs/               설계서, ADR(docs/adr)
 | estimate / estimate_item | 견적 / 내역 |
 
 UI 문구와 에러 메시지는 한국어, 코드 식별자·주석은 영어 또는 한국어 모두 허용(일관성 유지).
+
+## Agent skills
+
+### Issue tracker
+
+이슈·스펙은 로컬 마크다운(`.scratch/<feature>/`)으로 관리한다. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+기본 5개 라벨(`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`)을 그대로 쓴다. 로컬 마크다운이므로 이슈 파일의 `Status:` 줄에 기록한다. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+single-context (루트 `GLOSSARY.md` + `docs/adr/`). See `docs/agents/domain.md`.
