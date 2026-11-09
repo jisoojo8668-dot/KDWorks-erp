@@ -1,0 +1,27 @@
+version: "2"
+run:
+  timeout: 5m
+linters:
+  enable:
+    - errcheck
+    - govet
+    - staticcheck
+    - ineffassign
+    - unused
+    - bodyclose
+    - sqlclosecheck
+    - rowserrcheck
+    - errorlint
+    - gosec
+    - depguard
+  settings:
+    depguard:
+      rules:
+        no-float-money-libs:
+          deny:
+            - pkg: "math/big"
+              desc: "금액은 int64(원 단위) 또는 shopspring/decimal 을 사용하세요"
+formatters:
+  enable:
+    - gofmt
+    - goimports

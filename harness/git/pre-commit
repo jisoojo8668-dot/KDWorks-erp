@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# 커밋 전 검사: 포맷 + 아키텍처 규칙 (빠른 것만). 전체 테스트는 CI에서.
+set -uo pipefail
+ROOT="$(git rev-parse --show-toplevel)"
+cd "$ROOT"
+make fmt arch || { echo "커밋 중단: 위 오류를 고치세요 (긴급 시 git commit --no-verify)"; exit 1; }
